@@ -9,62 +9,98 @@
 <header>
     <div class="container">
         <div class="logo-top">
-            <a href="#"><img src="#" width="" height="" alt="Логотип"></a>
+            <a href="index.html"><img src="img/nerds-logo.png" width="160" height="65" alt="Логотип"></a>
         </div>
         <nav class="top-menu">
             <ul>
-                <li><a href="#">Студия</a></li>
+                <li><a href="index.html">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
-                <li><a href="#">Магазин</a></li>
+                <li><a class="active" href="#">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
-        <div class="basket">
+        <div class="top-cart">
             Корзина
         </div>
+        <div class="clearfix"></div>
         <div class="title">
             <h1>Магазин готовых шаблонов</h1>
         </div>
     </div>
 </header>
-<main>
-    <div class="container">
-        <aside>
-            <div class="range-toggle">
-
-            </div>
-            <form action="#" method="post">
+<main class="catalog-page">
+    <div class="container clearfix">
+        <aside class="catalog-aside">
+            <form class="catalog-form" action="#" method="post">
+                <h2>Стоимость</h2>
+                <div class="range-toggle">
+                    <div class="toggle-button-left"></div>
+                    <div class="toggle-button-right"></div>
+                </div>
+                <div class="price-fields">
+                    <label for="price-field-1">от</label><input type="text" name="price-field-1" value="0"
+                                                                id="price-field-1">
+                    <label for="price-field-2">до</label><input type="text" name="price-field-2" value="15 000"
+                                                                id="price-field-2">
+                </div>
                 <h2>Сетка</h2>
-                <label><input name="adaptive" type="radio" checked>Адаптивная</label>
-                <label><input name="fixed" type="radio">Фиксированная</label>
-                <label><input name="liquid" type="radio">Резиновая</label>
+                <input class="radio" id="adaptive" name="grid-type" type="radio" checked>
+                <label for="adaptive">Адаптивная</label>
+                <input class="radio" id="fixed" name="grid-type" type="radio">
+                <label for="fixed">Фиксированная</label>
+                <input class="radio" id="liquid" name="grid-type" type="radio">
+                <label for="liquid">Резиновая</label>
                 <h2>Особенности</h2>
-                <label><input name="slider" type="checkbox" checked>Слайдер</label>
-                <label><input name="advantages-block" type="checkbox">Блок преимуществ</label>
-                <label><input name="news" type="checkbox" checked>Новости</label>
-                <label><input name="gallery" type="checkbox">Галерея</label>
-                <label><input name="cart" type="checkbox">Корзина</label>
-                <button>Показать</button>
+                <input class="checkbox" id="slider" name="slider" type="checkbox" checked disabled>
+                <label for="slider">Слайдер</label>
+                <input class="checkbox" id="advantages-block" name="advantages-block" type="checkbox" disabled>
+                <label for="advantages-block">Блок преимуществ</label>
+                <input class="checkbox" id="news" name="news" type="checkbox" checked>
+                <label for="news">Новости</label>
+                <input class="checkbox" id="gallery" name="gallery" type="checkbox">
+                <label for="gallery">Галерея</label>
+                <input class="checkbox" id="cart" name="cart" type="checkbox">
+                <label for="cart">Корзина</label>
+                <button class="btn">Показать</button>
             </form>
         </aside>
         <div class="screenshots">
-            <div class="screenshots-menu">
-                <span>Сортировать</span>
+            <div class="screenshots-menu clearfix">
+                <h2>Сортировать</h2>
                 <ul class="sort-type">
-                    <li>По цене</li>
-                    <li>По типу</li>
-                    <li>По названию</li>
+                    <li><a href="#">По цене</a></li>
+                    <li><a href="#">По типу</a></li>
+                    <li><a href="#">По названию</a></li>
+                    <li><a class="sort-arrow-down" href="#"></a></li>
+                    <li><a class="sort-arrow-up" href="#"></a></li>
                 </ul>
             </div>
-            <div class="screenshots-left-column">
-                <div class="screenshot-1"><img src="#" width="" height=""></div>
-                <div class="screenshot-2"><img src="#" width="" height=""></div>
-                <div class="screenshot-3"><img src="#" width="" height=""></div>
-            </div>
-            <div class="screenshots-right-column">
-                <div class="screenshot-4"><img src="#" width="" height=""></div>
-                <div class="screenshot-5"><img src="#" width="" height=""></div>
-                <div class="screenshot-6"><img src="#" width="" height=""></div>
+            <div class="screenshots-columns clearfix">
+                <div class="screenshots-left-column">
+                    <div class="screenshot screenshot-1">
+                        <img src="img/img-sedona.jpg" width="360" height="576">
+                        <div class="screenshot-price">
+                            <h3>Sedona</h3>
+                            <p>Информационный сайт для туристов</p>
+                            <a class="btn" href="#">9900 руб.</a>
+                        </div>
+                    </div>
+                    <div class="screenshot screenshot-2"><img src="img/img-barbershop.jpg" width="360" height="576">
+                    </div>
+                    <div class="screenshot screenshot-3"><img src="img/img-aplus.jpg" width="360" height="576"></div>
+                </div>
+                <div class="screenshots-right-column">
+                    <div class="screenshot screenshot-4">
+                        <img src="img/img-pink.jpg" width="360" height="576">
+                        <div class="screenshot-price">
+                            <h3>Pink App</h3>
+                            <p>Продуктовый лендинг приложения для iOS и Android</p>
+                            <a class="btn" href="#">9900 руб.</a>
+                        </div>
+                    </div>
+                    <div class="screenshot screenshot-5"><img src="img/img-mishka.jpg" width="360" height="576"></div>
+                    <div class="screenshot screenshot-6"><img src="img/img-kvast.jpg" width="360" height="576"></div>
+                </div>
             </div>
             <div class="pagination">
                 <ul>
@@ -76,10 +112,8 @@
             </div>
         </div>
     </div>
-</main>
-<footer>
     <section class="map">
-        <img src="#" width="" height="" alt="Карта">
+        <img src="img/map.jpg" width="1920" height="414" alt="Карта">
         <div class="address">
             <h2>nЁrds design studio</h2>
             <p>
@@ -88,19 +122,36 @@
 
                 тел. +7 (812) 275-75-75
             </p>
-            <a class="button" href="#">Напишите нам</a>
+            <a class="btn" href="#">Напишите нам</a>
         </div>
-        <div class="map-logo"><img src="#" width="" height="" alt="Логотип на карте"></div>
+        <div class="map-logo"><img src="img/map-marker.png" width="" height="" alt="Логотип на карте"></div>
     </section>
-    <div class="container">
+    <section class="inquiry-form">
+        <form action="#" method="post">
+            <h2>Напишите нам</h2>
+            <label for="inquiry-name">Ваше имя:</label>
+            <input type="text" name="inquiry-name" id="inquiry-name" placeholder="Представьтесь, пожалуйста">
+            <label for="inquiry-email">Ваш e-mail:</label>
+            <input type="email" name="inquiry-email" id="inquiry-email" placeholder="Для отправки ответа">
+            <label for="inquiry-text">Текст письма:</label>
+            <input type="text" name="inquiry-text" id="inquiry-text" placeholder="В свободной форме">
+            <button class="btn" type="submit">Отправить</button>
+        </form>
+    </section>
+</main>
+<footer class="main-footer">
+    <div class="container clearfix">
         <div class="footer-soc-buttons">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+            <a class="soc vk" href="#"></a>
+            <a class="soc fb" href="#"></a>
+            <a class="soc inst" href="#"></a>
         </div>
         <div class="footer-text">
             <b>Давайте дружить, это выгодно!</b>
             <p>Скидка 10% для друзей из социальных сетей.</p>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </div>
     </div>
 </footer>
+</body>
+</html>
