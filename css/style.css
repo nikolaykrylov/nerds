@@ -459,6 +459,10 @@ body {
     margin-top: 80px;
 }
 
+.element-hidden {
+    display: none;
+}
+
 
 
 .map .btn:hover {
@@ -1026,6 +1030,52 @@ label {
     padding: 70px 100px 85px 100px;
     background-color: white;
     box-shadow: 4px 18px 54px #6a6b6b;
+    z-index: 2000;
+    display: none;
+}
+
+@keyframes bounce {
+    0%  { transform: translateY(-2000px); }
+    70% { transform: translateY(30px);   }
+    90% { transform: translateY(-10px);    }
+    100%  { transform: translateY(0);       }
+
+}
+
+@keyframes shake {
+    0%, 100%                {transform: translateX(0);    }
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80%      {transform: translateX(10px); }
+}
+
+.inquiry-form-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.inquiry-form-error {
+    animation: shake 0.6s;
+}
+
+.inquiry-form-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url("../img/close-cross.png");
+    background-repeat: no-repeat;
+    background-color: white;
+    opacity: 0.3;
+    border: none;
+    top: 80px;
+    right: 90px;
+}
+
+.inquiry-form-close:hover {
+    opacity: 1;
+}
+
+.inquiry-form-close:focus {
+    opacity: 0.1;
 }
 
 .inquiry-form h2 {
@@ -1049,6 +1099,26 @@ label {
     border: 2px solid #d7dcde;
 }
 
+.inquiry-form input[id="inquiry-name"]:hover,
+.inquiry-form input[id="inquiry-email"]:hover,
+.inquiry-form textarea[id="inquiry-text"]:hover {
+    border: 2px solid #b4b9bb;
+}
+
+.inquiry-form input[id="inquiry-name"]:focus,
+.inquiry-form input[id="inquiry-email"]:focus,
+.inquiry-form textarea[id="inquiry-text"]:focus {
+    border: 2px solid black;
+    outline: none
+}
+
+.inquiry-form input[id="inquiry-name"]:focus:invalid,
+.inquiry-form input[id="inquiry-email"]:focus:invalid,
+.inquiry-form textarea[id="inquiry-text"]:focus:invalid {
+    border: 2px solid red;
+    outline: none;
+}
+
 .inquiry-form textarea[id="inquiry-text"] {
     box-sizing: border-box;
     width: 760px;
@@ -1062,3 +1132,13 @@ label {
 .inquiry-form .btn {
     border: none;
 }
+
+.inquiry-form .btn:hover {
+    background-color: #e74246;
+}
+
+.inquiry-form .btn:focus {
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+}
+

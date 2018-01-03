@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>nerds</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 </head>
 <body>
@@ -146,7 +147,8 @@
         <div class="clearfix"></div>
     </div>
     <section class="map">
-        <img src="img/map.jpg" width="1920" height="414" alt="Карта">
+        <img src="img/map.jpg" width="1900" height="414" alt="Карта">
+        <div id="map" style="max-width: 100%; height:414px"></div>
         <div class="address">
             <h2>nЁrds design studio</h2>
             <p>
@@ -160,7 +162,7 @@
         <div class="map-logo"><img src="img/map-marker.png" width="" height="" alt="Логотип на карте"></div>
     </section>
     <section class="inquiry-form">
-        <form action="#" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post">
             <h2>Напишите нам</h2>
             <div class="left-side">
                 <label for="inquiry-name">Ваше имя:</label>
@@ -175,6 +177,7 @@
             <textarea id="inquiry-text" name="inquiry-text" placeholder="В свободной форме"></textarea>
             <button class="btn" type="submit">Отправить</button>
         </form>
+        <button class="inquiry-form-close" title="Закрыть"></button>
     </section>
 </main>
 <footer class="main-footer">
@@ -189,7 +192,10 @@
             <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
     </div>
+
 </footer>
-<script src="https://use.fontawesome.com/18399b4322.js"></script>
+<script src="//api-maps.yandex.ru/2.1/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+<script src="js/popup.js"></script>
+<script src="js/map.js"></script>
 </body>
 </html>

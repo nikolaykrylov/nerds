@@ -129,14 +129,20 @@
     <section class="inquiry-form">
         <form action="#" method="post">
             <h2>Напишите нам</h2>
-            <label for="inquiry-name">Ваше имя:</label>
-            <input type="text" name="inquiry-name" id="inquiry-name" placeholder="Представьтесь, пожалуйста">
-            <label for="inquiry-email">Ваш e-mail:</label>
-            <input type="email" name="inquiry-email" id="inquiry-email" placeholder="Для отправки ответа">
+            <div class="left-side">
+                <label for="inquiry-name">Ваше имя:</label>
+                <input type="text" name="inquiry-name" id="inquiry-name" placeholder="Представьтесь, пожалуйста" required>
+            </div>
+            <div class="right-side">
+                <label for="inquiry-email">Ваш e-mail:</label>
+                <input type="email" name="inquiry-email" id="inquiry-email" placeholder="Для отправки ответа" required>
+            </div>
+            <div class="clearfix"></div>
             <label for="inquiry-text">Текст письма:</label>
-            <input type="text" name="inquiry-text" id="inquiry-text" placeholder="В свободной форме">
+            <textarea id="inquiry-text" name="inquiry-text" placeholder="В свободной форме" required></textarea>
             <button class="btn" type="submit">Отправить</button>
         </form>
+        <button class="inquiry-form-close"></button>
     </section>
 </main>
 <footer class="main-footer">
