@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>nerds</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -20,7 +22,7 @@
             </ul>
         </nav>
         <div class="top-cart">
-            Корзина
+            <a href="#">Корзина</a>
         </div>
         <div class="clearfix"></div>
         <div class="title">
@@ -81,7 +83,7 @@
                         <img src="img/img-sedona.jpg" width="360" height="576" alt="Скриншот сайта Седона">
                         <div class="screenshot-price">
                             <h3>Sedona</h3>
-                            <p>Информационный сайт для туристов</p>
+                            <p class="screenshot-description">Информационный сайт для туристов</p>
                             <a class="btn" href="#">9900 руб.</a>
                         </div>
                     </div>
@@ -113,7 +115,8 @@
         </div>
     </div>
     <section class="map">
-        <img src="img/map.jpg" width="1920" height="414" alt="Карта">
+        <img src="img/map.jpg" width="1900" height="414" alt="Карта">
+        <div id="map" style="max-width: 100%; height:414px"></div>
         <div class="address">
             <h2>nЁrds design studio</h2>
             <p>
@@ -159,5 +162,7 @@
         </div>
     </div>
 </footer>
+<script src="//api-maps.yandex.ru/2.1/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+<script src="js/common.min.js"></script>
 </body>
 </html>
